@@ -1,0 +1,8 @@
+
+use "/data01/brock/ORCA0.25/mask.nc"
+use Cflx2_STD_IAV_1y_1850-2099.nc
+
+let var=if tmask[k=1,d=1] eq 1 then  CFLX2_STD_IAV
+save/clobber/file=ORCA0.25_ex1.nc VAR[k=1], NAV_LON[d=1], NAV_LAT[d=1]
+
+
